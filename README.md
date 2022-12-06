@@ -2,6 +2,8 @@
 
 ## About
 
+A JavaScript coding challenge for UConn Boot Camp.
+
 ## Description
 
 ## Technologies
