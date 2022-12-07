@@ -68,6 +68,8 @@ function generatePassword() {
   ];
   const numericalOptions = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   const specialCharacterOptions = ["!", "@", "#", "$", "%", "^", "&", "*"];
+  // Where user choices will be stored
+  let userChoices = [];
   // Where generated password will be stored
   let userPassword = [];
   // Ask user for password length
@@ -76,8 +78,7 @@ function generatePassword() {
   );
   // Validate user choice
   userChoiceLength = parseInt(userChoiceLength);
-  if (userChoiceLength >= 8 && userChoiceLength <= 128) {
-  } else {
+  if (userChoiceLength < 8 || userChoiceLength > 128) {
     return;
   }
   // Ask user if password should contain lowercase letters
@@ -86,7 +87,7 @@ function generatePassword() {
   );
   // Validate user choice
   if (userChoiceLowercase) {
-    userPassword = userPassword.concat(lowercaseOptions);
+    userChoices = userChoices.concat(lowercaseOptions);
   }
   // Ask user if password should contain uppercase letters
   let userChoiceUppercase = confirm(
@@ -94,7 +95,7 @@ function generatePassword() {
   );
   // Validate user choice
   if (userChoiceUppercase) {
-    userPassword = userPassword.concat(uppercaseOptions);
+    userChoices = userChoices.concat(uppercaseOptions);
   }
   // Ask user if password should contain numbers
   let userChoiceNumbers = confirm(
@@ -102,7 +103,7 @@ function generatePassword() {
   );
   // Validate user choice
   if (userChoiceNumbers) {
-    userPassword = userPassword.concat(numericalOptions);
+    userChoices = userChoices.concat(numericalOptions);
   }
   // Ask user if password should contain special characters
   let userChoiceSpecialCharacters = confirm(
@@ -110,9 +111,13 @@ function generatePassword() {
   );
   // Validate user choice
   if (userChoiceSpecialCharacters) {
-    userPassword = userPassword.concat(specialCharacterOptions);
+    userChoices = userChoices.concat(specialCharacterOptions);
   }
-  // Return generated
+  //
+  for (let i = 0; i < userChoiceLength; i++) {
+    userPassword.push(getRandomElement(userChoices));
+  }
+  // Return generated password
   return userPassword.join("");
 }
 
