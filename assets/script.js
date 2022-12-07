@@ -92,6 +92,7 @@ function generatePassword() {
   /*
   Right now the prompts only check for numbers between 8–128 characters. I need to also check for other characters, like letters and special characters. If these are entered into the prompt, there needs to be a message saying to enter a number. I also need to check if the user doesn't enter anything into the prompt. Then there needs to be a message saying to enter a number.
 
+  Does this only check if a string contains only digits?
   }
   while (!/^[0-9]+$/.test(userChoiceLength)) {
     alert("You did not enter a number.");
@@ -99,6 +100,7 @@ function generatePassword() {
       "How long would you like your password to be? (8–128 characters) (Digits only)"
     );
   }
+  Because I changed the string into a number, I need something else to check that it is in fact a number. 
   */
 
   // Ask user if password should contain lowercase letters
