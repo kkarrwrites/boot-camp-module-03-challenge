@@ -1,3 +1,5 @@
+"use strict";
+
 // Get references to the #generate element
 const generateBtn = document.querySelector("#generate");
 
