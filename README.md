@@ -1,4 +1,4 @@
-# Boot Camp Module 3 Challenge
+# Boot Camp - Module 3 Challenge - JavaScript Challenge: Password Generator
 
 ## About
 
