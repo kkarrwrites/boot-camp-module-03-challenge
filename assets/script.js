@@ -151,7 +151,7 @@ function generatePassword() {
     location.reload();
   }
 
-  // Take user's password length choice and loop it over the concated user choices array
+  // Take user's password length choice and loop it over the user choices array
   for (let i = 0; i < userChoiceLength; i++) {
     userPassword.push(getRandomValue(userChoices));
   }
