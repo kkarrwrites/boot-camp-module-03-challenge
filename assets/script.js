@@ -90,6 +90,7 @@ function generatePassword() {
     userChoiceLength < 8 ||
     userChoiceLength > 128 ||
     isNaN(userChoiceLength)
+    // !/^[0-9]+$/.test(userChoiceLength)
   ) {
     alert(
       "You must enter a number between 8–128 characters. Please try again."
@@ -137,7 +138,7 @@ function generatePassword() {
     userChoices = userChoices.concat(specialCharacterOptions);
   }
 
-  // Validate user choice
+  // Validate user choices
   if (
     !userChoiceLowercase &&
     !userChoiceUppercase &&
