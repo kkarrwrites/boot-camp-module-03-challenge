@@ -95,7 +95,8 @@ function generatePassword() {
     alert(
       "You must enter a number between 8–128 characters. Please try again."
     );
-    location.reload();
+    // location.reload();
+    return;
   }
 
   // Ask user if password should contain lowercase letters
@@ -148,7 +149,8 @@ function generatePassword() {
     alert(
       "You must choose at least one set of critera for your password, either lowercase letters, uppercase letters, numbers, or special characters. Please try again."
     );
-    location.reload();
+    // location.reload();
+    return;
   }
 
   // Take user's password length choice and loop it over the user choices array
