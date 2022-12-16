@@ -95,7 +95,7 @@ function generatePassword() {
     alert(
       "You must enter a number between 8–128 characters. Please try again."
     );
-    // location.reload();
+    textarea.placeholder = "Your Secure Password";
     return;
   }
 
@@ -149,7 +149,7 @@ function generatePassword() {
     alert(
       "You must choose at least one set of critera for your password, either lowercase letters, uppercase letters, numbers, or special characters. Please try again."
     );
-    // location.reload();
+    textarea.placeholder = "Your Secure Password";
     return;
   }
 
