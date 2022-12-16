@@ -14,13 +14,24 @@ I then worked on developing and writing the prompts the user would need to answe
 
 I then took time to address any instances of the user inputing information into the prompts that did not work within the parameters of the project (e.g., the password needs to be between 8 and 128 characters long). This was the part that was the hardest for me. Whenever the user inputs an incorrect number or character, I made it so that they receive a message regarding their mistake; however, after that, I had some trouble getting the user back to the beginning state of the project. Thus, for now, I forced the page to reload so that the user can try again.
 
+- Per feedback from the Boot Camp grading team, I deleted the reload method and added in a return. I figured out on my own that to make the placeholder text say "Your Secure Password" instead of undefined, I simply had to change the textarea as shown below.
+
+```
+// location.reload();
+textarea.placeholder = "Your Secure Password";
+return;
+
+```
+
 One thing I spent some time researching that I enjoyed doing for this project was creating a reuseable function that can get a random value from an array:
 
 ```
+
 function getRandomValue(array) {
-  const randomValue = array[Math.floor(Math.random() * array.length)];
-  return randomValue;
+const randomValue = array[Math.floor(Math.random() * array.length)];
+return randomValue;
 }
+
 ```
 
 ## Technologies
